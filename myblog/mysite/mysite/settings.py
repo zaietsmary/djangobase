@@ -100,9 +100,17 @@ TIME_ZONE = 'UTC'        # Часовий пояс
 USE_I18N = True          # Використання перекладу
 USE_TZ = True            # Використання часових поясів
 
+STATIC_URL = '/static/'
 
-# Статичні файли (CSS, JS, зображення)
-STATIC_URL = 'static/'
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
 
 # Тип первинного ключа за замовчуванням для моделей
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
