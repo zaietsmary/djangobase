@@ -22,7 +22,7 @@ class ArticleImageInline(admin.TabularInline):
                 }),)
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'pub_date', 'slug', 'main_page')
+    list_display = ('title', 'pub_date', 'slug', 'main_page', 'get_category')
     inlines = [ArticleImageInline]
     prepopulated_fields = {'slug': ('title',)}
  #   raw_id_fields = ('category',)
@@ -35,6 +35,11 @@ class ArticleAdmin(admin.ModelAdmin):
             'fields': ('slug',),
         }),
     )
+
+    def get_category(self, obj):
+        return obj.category.category
+
+    get_category.short_description = 'Категорія'
 
     def delete_file(self, pk, request):
         """Delete an image."""
