@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: rgba(44, 44, 44, 0.81);
+  line-height: 1.6;
+  text-align: justify;
+  background:
+    linear-gradient(rgba(254,249,249,0.7), rgba(255,245,247,0.7)),
+    url('../img/background.jpg') repeat-y;
+}
+
+div > h1 {
+  color: #4b1d3f;
+  text-align: center;
+  margin: 25px 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+body > div > nav > div > a > h4,
+body > div > a > h4 {
+  margin: 0 10px;
+  color: #6b3a5b;
+  font-family: 'Ubuntu', sans-serif;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+body > div > nav > div > a:hover,
+body > div > a:hover {
+  color: #ff6f91;
+}
+
+body > div > nav > div > a > h4::after,
+body > div > a > h4::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ff6f91;
+  transition: width 0.3s ease;
+}
+
+body > div > nav > div > a > h4:hover::after,
+body > div > a > h4:hover::after {
+  width: 100%;
+}
+
+body > div > nav > div > a > h4:hover,
+body > div > a > h4:hover {
+  color: #ff4664;
+  transform: translateY(-2px);
+}
+
+.article-block {
+  background: linear-gradient(145deg, #ffffff, #fff0f5);
+  border-radius: 16px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 800px;
+  color: #3a1f2c;
+  box-shadow: 0 4px 12px rgba(107, 62, 62, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.article-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.article-block a {
+  color: #ff4664;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.article-block a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ff7a9b;
+  transition: width 0.3s ease;
+}
+
+.article-block a:hover {
+  color: #ff1a3c;
+}
+
+.article-block a:hover::after {
+  width: 100%;
+}
+
+div.container-image > img {
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.container-image > img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+body > div > div > a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ff4664;
+  background: linear-gradient(135deg, #e8c9cf, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+body > div > div > a:hover {
+  transform: translateY(-2px);
+  color: #ff4664;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, rgb(239, 232, 232), rgba(255, 244, 247, 0.54));
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+  .article-block {
+    margin: 15px;
+    padding: 20px;
+  }
+  body > div > div > ol {
+    gap: 5px;
+  }
+}
+
+body > div > ol {
+  display: flex;
+  list-style: none;
+  padding: 10px 20px;
+  margin: 15px 0;
+  gap: 10px;
+  background: #fff0f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(107, 103, 103, 0.34);
+}
+
+body > div > div > ol > li > a {
+  display: inline-block;
+  padding: 3px 6px;
+  color: #ff4664;
+  text-align: justify;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+body > div > div > ol > li > a:hover {
+  background-color: #ffd6e0;
+  color: #ff1a3c;
+}
+
+body > div > div > ol > li {
+  display: flex;
+  list-style: none;
+  padding: 10px 20px;
+  margin: 0;
+  gap: 10px;
+  background: #fff0f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+body > div > ol > li {
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 8px;
+  background-color: #fff0f5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+body > div > ol > li a {
+  display: inline-block;
+  padding: 3px 6px;
+  color: #ff4664;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+body > div > ol > li a:hover {
+  background-color: #ffd6e0;
+  color: #ff1a3c;
+}
